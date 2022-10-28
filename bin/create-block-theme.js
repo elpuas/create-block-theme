@@ -8,7 +8,7 @@ const npmInstallCommand  = `cd ${repoName} && npm install`;
 let checkedOut
 const format = /^[0-9-]+$/gm;
 
-if (typeof repoName !== 'undefined' && format.test(repoName) ) {
+if (typeof repoName !== 'undefined' && ! format.test(repoName) ) {
     checkedOut = runCommand(gitCheckoutCommand);
 } else {
     console.error('Error: Please use a valid name for your theme');
