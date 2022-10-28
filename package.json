@@ -1,0 +1,11 @@
+{
+  "name": "create-block-theme",
+  "version": "1.0.0",
+  "description": "Scaffold a block based theme",
+  "main": "index.js",
+  "bin": {
+    "create-block-theme": "bin/create-block-theme.js"
+  },
+  "author": "Alfredo Navas",
+  "license": "ISC"
+}
