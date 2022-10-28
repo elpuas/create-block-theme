@@ -1,5 +1,6 @@
 const fs = require( 'fs' );
 const humanize = require('./humanize.js');
+
 /**
  * Read a file and replace a string with another string.
  *
@@ -25,8 +26,6 @@ const themeFileReader = ( theme, file ) => {
                         if (error) {
                             console.log(error);
                             return;
-                        } else {
-                            console.log('Updated style.css');
                         }
                     }
                 );

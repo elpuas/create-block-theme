@@ -21,25 +21,25 @@ const jsonReader = (filePath, cb) => {
 }
 
 
-const updateJson = ( repo ) => jsonReader(
-    `${repo}/package.json`,
-    (error, file) => {
-        if (error) {
-            console.error("Error reading file:", error);
-            process.exit(1);
-        }
-
-        file.name = `${repo}`;
-
-        fs.writeFile(`${repo}/package.json`, JSON.stringify(file, null, 2), error => {
+const updateJson = ( repo ) => {
+    jsonReader(
+        `${repo}/package.json`,
+        (error, file) => {
             if (error) {
-                console.error("Error writing file:", error);
+                console.error("Error reading file:", error);
                 process.exit(1);
-            } else {
-                console.log('Updated package.json');
             }
-        });
-    }
-);
+
+            file.name = `${repo}`;
+
+            fs.writeFile(`${repo}/package.json`, JSON.stringify(file, null, 2), error => {
+                if (error) {
+                    console.error("Error writing file:", error);
+                    process.exit(1);
+                }
+            });
+        }
+    );
+}
 
 module.exports = updateJson;
