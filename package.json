@@ -1,10 +1,15 @@
 {
   "name": "@elpuas/create-block-theme",
   "email": "elpuas@gmail.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scaffold a block based theme",
   "main": "index.js",
-  "keywords": ["theme","block","scaffold", "create-block-theme"],
+  "keywords": [
+    "theme",
+    "block",
+    "scaffold",
+    "create-block-theme"
+  ],
   "bin": {
     "create-block-theme": "bin/create-block-theme.js"
   },
