@@ -1,10 +1,16 @@
 {
-  "name": "create-block-theme",
+  "name": "@elpuas/create-block-theme",
+  "email": "elpuas@gmail.com",
   "version": "1.0.0",
   "description": "Scaffold a block based theme",
   "main": "index.js",
+  "keywords": ["theme","block","scaffold", "create-block-theme"],
   "bin": {
     "create-block-theme": "bin/create-block-theme.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elpuas/create-block-theme.git"
   },
   "author": "Alfredo Navas",
   "license": "ISC"

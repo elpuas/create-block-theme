@@ -24,7 +24,10 @@ const gitCheckoutCommand = `git clone https://github.com/elpuas/create-block-bas
 const npmInstallCommand = `cd ${repoName} && npm install`;
 
 console.log(`Creating a new WordPress theme called ${repoName}...`);
+console.log('');
+console.log('Cloning the repo...');
 const checkedOut = runCommand(gitCheckoutCommand);
+
 if (!checkedOut) {
     console.error('Failed to checkout the repo');
     process.exit(-1);
