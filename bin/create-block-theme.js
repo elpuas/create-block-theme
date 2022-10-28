@@ -30,15 +30,18 @@ const checkedOut = runCommand(gitCheckoutCommand);
 
 if (!checkedOut) {
     console.error('Failed to checkout the repo');
-    process.exit(-1);
+    process.exit(1);
 }
 
 console.log(`Installing dependencies for ${repoName}...`);
+
 const installed = runCommand(npmInstallCommand);
+
 if (!installed) {
     console.error('Failed to install dependencies');
-    process.exit(-1);
+    process.exit(1);
 }
+
 console.log(`Success! Created ${repoName} at ${process.cwd()}/${repoName}`);
 console.log('Inside that directory, you can run several commands:');
 console.log('');
