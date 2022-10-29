@@ -9,7 +9,7 @@ const humanize = require('./humanize.js');
  */
 const themeFileReader = ( theme, file ) => {
     try {
-        fs.readFile(
+        fs.readFileSync(
             `${theme}/${file}`, 'utf-8',
             function (error, contents) {
                 if (error) {
@@ -19,7 +19,7 @@ const themeFileReader = ( theme, file ) => {
 
                 const replaced = contents.replace(/Create Block Based Theme/g, humanize(theme));
 
-                fs.writeFile(
+                fs.writeFileSync(
                     `${theme}/${file}`,
                     replaced, 'utf-8',
                     function (error) {

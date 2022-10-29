@@ -3,17 +3,17 @@ const runCommand         = require('./lib/runCommand.js');
 const updateJson         = require('./lib/updateJson.js');
 const themeFileReader    = require('./lib/themeFileReader.js');
 const chalk              = require('chalk');
+const prompts            = require('prompts');
 const repoName           = process.argv[2];
 const gitCheckoutCommand = `git clone https://github.com/elpuas/create-block-based-theme.git ${repoName}`;
 const npmInstallCommand  = `cd ${repoName} && npm install`;
 let checkedOut
-const format  = /^[0-9-]+$/gm;
 
-if (typeof repoName !== 'undefined' && ! format.test(repoName) ) {
-    checkedOut = runCommand(gitCheckoutCommand);
+if (typeof repoName !== 'undefined' && repoName.match(format)) {
+        checkedOut = runCommand(gitCheckoutCommand);
 } else {
     console.error(`${chalk.red('Error:')} Please use a valid name for your theme`);
-    console.log('Script Example: npx @elpuas/create-block-theme my-super-awesome-theme');
+    console.log(`Script Example: npx @elpuas/create-block-theme chalk.green(my-super-awesome-theme)`);
     process.exit(1);
 }
 

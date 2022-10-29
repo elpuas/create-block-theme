@@ -11,7 +11,7 @@
     "create-block-theme"
   ],
   "bin": {
-    "create-block-theme": "bin/create-block-theme.js"
+    "create-block-theme": "bin/index.js"
   },
   "repository": {
     "type": "git",

@@ -7,7 +7,7 @@ const fs = require( 'fs' );
  * @param {function} cb The callback function.
  */
 const jsonReader = (filePath, cb) => {
-    fs.readFile(filePath, (err, fileData) => {
+    fs.readFileSync(filePath, (err, fileData) => {
         if (err) {
             return cb && cb(err);
         }
@@ -32,7 +32,7 @@ const updateJson = ( repo ) => {
 
             file.name = `${repo}`;
 
-            fs.writeFile(`${repo}/package.json`, JSON.stringify(file, null, 2), error => {
+            fs.writeFileSync(`${repo}/package.json`, JSON.stringify(file, null, 2), error => {
                 if (error) {
                     console.error("Error writing file:", error);
                     process.exit(1);
