@@ -20,6 +20,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.2] - 2022-10-28
+
+### Fixed
+
+- Fixed the `string.test()` conditional that wasn't work as expected.
+
 ## [1.0.1] - 2022-10-28
 
 ### Added
@@ -31,14 +37,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Change the `./bin/create-block-theme.js` and move all functions outside the main file.
 
-### Fixed
-
 ## [1.0.0] - 2022-10-27
 
 ### Added
 
 - First package release
-
-### Changed
-
-### Fixed
